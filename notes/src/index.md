@@ -5,11 +5,15 @@ tagline:
 actionText: Quick Start →
 actionLink: /guide/
 features:
-- title: Feature 1 Title
+- title: Hiphop never die
   details: Feature 1 Description
-- title: Feature 2 Title
+- title: RapViet
   details: Feature 2 Description
-- title: Feature 3 Title
+- title: Hiphop never die
   details: Feature 3 Description
 footer: Made by  with ❤️
 ---
+
+> Elegant code is not clever code, elegant code is code that is so simple to read it is clever. Strive for elegance.
+
+**We want to write code that not only works but also maintainable, and efficient and we want all that while still being productive.**

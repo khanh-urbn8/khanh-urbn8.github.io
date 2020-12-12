@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'URBN8 Docs',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -36,7 +36,7 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
+        text: 'Data portal',
         link: '/guide/',
       },
       {
@@ -55,7 +55,8 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'test',
+            'structure',
           ]
         }
       ],
@@ -68,5 +69,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
+    ['vuepress-plugin-right-anchor']
   ]
 }
