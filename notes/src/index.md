@@ -30,9 +30,12 @@ CD là practice mà cty dùng cho quy trình release các tính năng/fix bugs l
 
 **I)** master là protected branch nghĩa là commit history không bao giờ bị được edit (immutable), chỉ có thêm mới.
 Ví dụ mình lỡ có commit A không mong muốn vào master, cách xử lý là tạo mới commit B revert thay đổi của commit A và đẩy vào master. Xóa commit A là chuyện không xảy ra.
+
 **II)** Dev khi làm feature/fix bug tách branch dev ra từ nhánh master.
+
 **III)** **Nhánh master luôn luôn nên ở trạng thái sẵn sàng release lên production**  (❤ production ready ❤ ).
 _Tức: code merged vào master không đưa đưa master vào trạng thái broken hoặc tính năng hoàn thiện nửa vời user không dùng dược_
+
 Số **(III)** quan trọng và khó. Nên mình implements những công cụ/ chiến thuật sau:
 
 ### 1) Automation Tests:
