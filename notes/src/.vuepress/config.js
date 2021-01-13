@@ -40,8 +40,8 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'General',
+        link: '/general/password'
       },
       {
         text: 'VuePress',
@@ -57,6 +57,17 @@ module.exports = {
             '',
             'test',
             'structure',
+          ]
+        }
+			],
+			
+      '/general/': [
+        {
+          title: 'Sờ cu',
+          collapsable: false,
+          children: [
+            'password',
+            'test',
           ]
         }
       ],
