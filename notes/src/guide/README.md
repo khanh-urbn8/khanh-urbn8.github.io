@@ -14,3 +14,4 @@
 - [Vì sao foreach không support async await](https://anonystick.com/blog-developer/vi-sao-foreach-khong-support-async-await-2020052381240532#t-1)
 
 - [Abstraction in Software with Examples](https://thevaluable.dev/abstraction-type-software-example/)
+- [User-defined Order in SQL](https://begriffs.com/posts/2018-03-20-user-defined-order.html)
