@@ -33,24 +33,24 @@ Developer spends most of the time reading and understanding code, than actually 
 ---
 *Bổn mới*:
 Bài trên lúc trước mềnh có gửi mọi người rồi. Giờ soạn lại vì giờ có thứ liên quan:
-## Lời ngỏ
+#### Lời ngỏ
 Một thời gian qua chúng ta dùng ui interaction test bằng cypress có vẻ không ngon: một phần vì thời gian chạy test quá lâu, tests cũng khá flaky, và cơ chế mock api cũng ko có độ tin cậy cao nên khó bảo trì và bắt lỗi.
 Nhưng nếu không có interaction tests thì có một lỗ trống trong FE testing đó là business logics ko được test. Mà code không test được thì dễ bug, nhất là khi cập nhật, refactor.
 Stateless components thì đã được test bởi visual regression test khá là ngon. Vậy còn business logics thì giờ sao?
 Đấy chính là sự sinh ra đời của unit test cho stores của chúng ta.
-## Ví dụ
+#### Ví dụ
 https://github.com/EarthToday/earthtoday-ui-react/blob/unit_test/src/stores/CreateCardStore.test.ts
-## Vài lưu ý:
+#### Vài lưu ý:
 - Dependencies của một store sẽ thông qua interfaces (external interfacings/contracts với dependencies bên ngoài)
 https://github.com/EarthToday/earthtoday-ui-react/blob/unit_test/src/stores/CreateCardStore.ts#L98-L104
 Cái này có dính líu tí tới chữ I trong SOLID principle. Ai muốn có thể tìm hiểu thêm.
 - Khi test, mình sẽ mock những dependencies của store đang test để tập trung test internal implementations của store đang test.
 Ví dụ: https://github.com/EarthToday/earthtoday-ui-react/blob/unit_test/src/stores/CreateCardStore.test.ts#L985-L1034
-## Túm lại là:
+#### Túm lại là:
 1) UI elements gồm element stylings, bố cục layouts, trạng thái UI khi thay đổi như hover... là ở lớp Stateless Component.
 2) FE business logics gom hết vào stores.
 3) Stateful components là lớp mỏng nối Store với Stateless Component.
-## Mục tiêu của chúng ta là:
+#### Mục tiêu của chúng ta là:
 - (1) sẽ được cover bởi automated visual regression tests.
 - (2) sẽ dược cover bởi automated unit tests như trên
 - cái (3) là cái mà mình sẽ hở, nên mình giữ nó càng mỏng, càng ít code càng tốt, và tuyệt đối ko chứa những thứ thuộc về (1) và (2)
